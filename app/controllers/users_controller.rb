@@ -9,7 +9,21 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       flash[:notice] = "Thanks for registering!"
       redirect_to about_path
+    else
+      render :new
     end
+  end
 
+  def show
+    @user = User.find_by(id: params[:id])
+    @user.username = @user.username.capitalize
+  end
+
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+  private
+  def user_params
+    params.require(:user).permit(:username, :password)
   end
 end
