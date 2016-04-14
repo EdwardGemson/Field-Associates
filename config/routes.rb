@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/register' => 'users#new'
   get '/about' => 'pages#about'
+  root 'users#index'
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
