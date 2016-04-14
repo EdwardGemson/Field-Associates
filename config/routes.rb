@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
+
+  resources :users, only: [:show, :create, :new, :edit, :update, :destroy]
+  resource :session, only: [:new, :create, :destroy]
+
+  get '/login' => 'sessions#new'
+  get '/logout' => 'sessions#destroy'
+  get '/register' => 'users#new'
+  get '/construction' => 'pages#construction'
+  get '/engineering' => 'pages#engineering'
+  get '/contact' => 'pages#contact'
+  get '/project' => 'pages#project'
+  get '/history' => 'pages#history'
+  get '/about' => 'pages#about'
+  root 'users#index'
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
