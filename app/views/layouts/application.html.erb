@@ -8,7 +8,13 @@
 </head>
 <body>
 <%= link_to "Field Associates", root_path%>
-<%= link_to "Home", about_path %>
+<%= link_to "About", about_path %>
+<%= link_to "Construction Services", construction_path %>
+<%= link_to "Engineering Services", engineering_path %>
+
+<%= link_to "Contact", contact_path %>
+<%= link_to "Projects", project_path %>
+<%= link_to "History", history_path %>
 <% if current_user %>
 <h2> Signed in as <%= current_user.username%> </h2>
 <%= link_to "Sign Out", logout_path %>

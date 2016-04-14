@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   get '/logout' => 'sessions#destroy'
   get '/register' => 'users#new'
+  get '/construction' => 'pages#construction'
+  get '/engineering' => 'pages#engineering'
+  get '/contact' => 'pages#contact'
+  get '/project' => 'pages#project'
+  get '/history' => 'pages#history'
   get '/about' => 'pages#about'
   root 'users#index'
     # The priority is based upon order of creation: first created -> highest priority.
