@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/engineering' => 'pages#engineering'
   get '/contact' => 'pages#contact'
   get '/project' => 'pages#project'
-  get '/history' => 'pages#history'
   get '/about' => 'pages#about'
   root 'users#index'
     # The priority is based upon order of creation: first created -> highest priority.
