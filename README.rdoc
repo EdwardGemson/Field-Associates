@@ -1,3 +1,3 @@
 == README
 
-My grandfather, Leo Field, is an engineer and CEO of his own company, Field Associates. I have attempted to "modernize" his site by using the same basic layout of his previous site, but updating the HTML and CSS. 
+My grandfather, Leo Field, is an engineer and CEO of his own company, Field Associates. I have attempted to "modernize" his site by using the same basic layout of his previous site, but updating the HTML and CSS. In the future I will attempt to add functionality by allowing users to setup meetings with his firm through google calendar.
