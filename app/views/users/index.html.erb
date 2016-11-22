@@ -1,6 +1,36 @@
+<div class="sidenav" id="mySidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<%= link_to "Home", root_path, id: "baritem"%>
+	<%= link_to "About", about_path, id: "baritem" %>
+	<%= link_to "Construction Services", construction_path , id: "baritem"%>
+	<%= link_to "Engineering Services", engineering_path, id: "baritem" %>
+	<%= link_to "Contact", contact_path, id: "baritem"%>
+	<%= link_to "Projects", project_path, id: "baritem"%>
+	<%= link_to "History", history_path, id: "baritem"%>
+	<% if current_user %>
+	<h2> Signed in as <%= current_user.username.capitalize%> </h2>
+	<%= link_to "Sign Out", logout_path, id: "baritem" %>
+	<%else%>
+	<%= link_to "Register", register_path, id: "baritem"%>
+	<%= link_to "Log In", login_path, id: "baritem" %>
+	<%end%>
+</div>
 <div id="main">
-	<h1> Engineers of the Future </h1>
-	<img src="http://www.ogs.ny.gov/Global/Images/BU/BA/RPM/ACP.jpg" style="width:200px;height:200px;">
-	<img src="http://cdn.newsday.com/polopoly_fs/1.10820913.1441753836!/httpImage/image.JPG_gen/derivatives/display_600/image.JPG" style="width:200px;height:200px;">
-	<img src="http://www.som.com/FILE/15269/jfkterminal4_788x900_frederickcharles_03jpg.jpg?h=800&s=17" style="width:200px;height:200px;">
+	 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+		<h2>FIELD ASSOCIATES, P.C. - CONSULTING ENGINEERS</h2>
+		<h1> Engineers of the Future </h1>
+			 <div id="cf7" class="shadow">
+	  <img class='opaque' src="http://www.ogs.ny.gov/Global/Images/BU/BA/RPM/ACP.jpg" style="width:300px;height:300px;" />
+	  <img src="http://www.brooklyneagle.com/sites/default/files/styles/panopoly_image_original/public/st.-marys-hospital-back.jpg?itok=huDCWlQR" style="width:300px;height:300px;" />
+	  <img src="https://cdn1.vox-cdn.com/thumbor/quqwdyCJPT5-8IpLeR4cCNrVrNE=/109x0:390x375/680x907/filters:format(webp)/cdn0.vox-cdn.com/uploads/chorus_image/image/47900181/caledonian.0.jpg" style="width:300px;height:300px;"
+	/>
+	  <img src="http://www.nychealthandhospitals.org/hhc/images/pressroom/20150707-press-release-HHC-Bellevue-named-national-Ebola-leader.jpg" style="width:300px;height:300px;">/>
+	</div>
+	<p id="cf7_controls">
+	  <span class="selected">Harlem State Office Building</span>
+	  <span>St. Mary’s Outpatient Health Center</span>
+	  <span>Parkside Correctional Facility</span>
+	  <span>JFK International Airport, Arrival Building </span>
+	</p>
  </div>
+
