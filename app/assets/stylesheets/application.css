@@ -45,6 +45,7 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    color: white;
 }
 
 #main {
@@ -55,4 +56,37 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav #baritem {font-size: 18px;}
+}
+
+
+p#cf7_controls {
+  text-align:center;
+}
+#cf7_controls span {
+  padding-right:1em;
+  cursor:pointer;
+  font-size:75%;
+}
+#cf7 {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto 10px;
+}
+#cf7 img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity:0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+#cf7 img.opaque {
+  opacity:1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
 }

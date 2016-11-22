@@ -1,3 +1,24 @@
+<div class="sidenav" id="mySidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <%= link_to "Home", root_path, id: "baritem"%>
+  <%= link_to "About", about_path, id: "baritem" %>
+  <%= link_to "Construction Services", construction_path , id: "baritem"%>
+  <%= link_to "Engineering Services", engineering_path, id: "baritem" %>
+  <%= link_to "Contact", contact_path, id: "baritem"%>
+  <%= link_to "Projects", project_path, id: "baritem"%>
+  <%= link_to "History", history_path, id: "baritem"%>
+  <% if current_user %>
+  <h2> Signed in as <%= current_user.username.capitalize%> </h2>
+  <%= link_to "Sign Out", logout_path, id: "baritem" %>
+  <%else%>
+  <%= link_to "Register", register_path, id: "baritem"%>
+  <%= link_to "Log In", login_path, id: "baritem" %>
+  <%end%>
+</div>
+
+<div id="main">    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
 <h1> Contact </h1>
   <p>Field Associates, P.C. </p>
   <p> Environmental, Construction Management, Electrical & Mechanical Engineers </p>
@@ -6,3 +27,4 @@
     <p> Phone: (516)-378-2794 </p>
     <p> Fax: (516)-378-4965 </p>
     <p> Address: 379 Nassau Road, Roosevelt, N.Y. 11575 </p>
+</div>

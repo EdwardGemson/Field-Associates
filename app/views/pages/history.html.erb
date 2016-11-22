@@ -1,2 +1,23 @@
-<h1> Field Associates History </h1>
-  <p> Field Associates was founded by Leo Field in... </p>
+<div class="sidenav" id="mySidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <%= link_to "Home", root_path, id: "baritem"%>
+  <%= link_to "About", about_path, id: "baritem" %>
+  <%= link_to "Construction Services", construction_path , id: "baritem"%>
+  <%= link_to "Engineering Services", engineering_path, id: "baritem" %>
+  <%= link_to "Contact", contact_path, id: "baritem"%>
+  <%= link_to "Projects", project_path, id: "baritem"%>
+  <%= link_to "History", history_path, id: "baritem"%>
+  <% if current_user %>
+  <h2> Signed in as <%= current_user.username.capitalize%> </h2>
+  <%= link_to "Sign Out", logout_path, id: "baritem" %>
+  <%else%>
+  <%= link_to "Register", register_path, id: "baritem"%>
+  <%= link_to "Log In", login_path, id: "baritem" %>
+  <%end%>
+</div>
+<div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+	<h1> Field Associates History </h1>
+  		<p> Field Associates was founded by Leo Field in... </p>
+ </div>
